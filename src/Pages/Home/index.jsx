@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import HomeSlider from "../../components/HomeSlider";
 import HomeCatSlider from "../../components/HomeCatSlider";
 import { FaShippingFast } from "react-icons/fa";
@@ -8,14 +7,16 @@ import Tab from "@mui/material/Tab";
 import ProductSlider from "../../components/ProductSlider";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Link } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
 import { Navigation } from "swiper/modules";
 import BlogItem from "../../components/BlogItem";
-import Footer from "../../components/Footer";
+
+import HomeSliderV2 from "../../components/HomeSliderV2";
+import BannerBoxV2 from "../../components/BannerBoxV2";
+import { useState } from "react";
 
 function Home() {
   const [value, setValue] = useState(0);
@@ -26,7 +27,29 @@ function Home() {
 
   return (
     <div className="bg-[#f5f0f0]">
-      <HomeSlider />
+      {/* <HomeSlider /> */}
+      <section className="py-6">
+        <div className="w-[90%] mx-auto flex bg-red-00 gap-4">
+          <div className="part1 w-[75%]">
+            <HomeSliderV2 />
+          </div>
+          <div className="part2 w-[30%] flex flex-col justify-between">
+            <BannerBoxV2
+              info="left"
+              image={
+                "https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/cms/sub-banner-1.jpg"
+              }
+            />
+            <BannerBoxV2
+              info="right"
+              image={
+                "https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/cms/sub-banner-2.jpg"
+              }
+            />
+          </div>
+        </div>
+      </section>
+
       <HomeCatSlider />
 
       <br></br>
@@ -105,7 +128,7 @@ function Home() {
       </section>
 
       <section className=" bg-white">
-        <div className="w-[90%] mx-auto">
+        <div className="w-[90%] mx-auto bg-red-00">
           <h1 className="text-2xl font-semibold">From the Blog</h1>
           <Swiper
             slidesPerView={3}
@@ -117,11 +140,21 @@ function Home() {
             <SwiperSlide>
               <BlogItem />
             </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogItem />
+            </SwiperSlide>
           </Swiper>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

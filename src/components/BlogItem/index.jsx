@@ -6,7 +6,7 @@ import { IoChevronForward } from "react-icons/io5";
 
 function BlogItem() {
   return (
-    <div className="w-full mt-4 flex justify-between">
+    <div className="w-full bg-red-00 mt-4 flex justify-between">
       <div className="group ">
         <div className="w-full overflow-hidden rounded-md cursor-pointer relative">
           <img

@@ -1,3 +1,10 @@
+.categoryPanel button{
+  text-transform: capitalize !important;
+}
+.submenu{
+  /* display: none; */
+}
+
 .nav li .submenu {
   visibility: hidden;
   z-index: 1000;

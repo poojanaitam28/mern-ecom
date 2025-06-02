@@ -17,8 +17,7 @@ function HomeCatSlider() {
           pagination={{
             clickable: true,
           }}
-       
-          modules={[Navigation ]}
+          modules={[Navigation]}
           className="homeCatSlider"
         >
           <SwiperSlide>
@@ -141,9 +140,6 @@ function HomeCatSlider() {
               </div>
             </Link>
           </SwiperSlide>
-         
-      
-     
         </Swiper>
       </div>
     </div>
