@@ -10,8 +10,11 @@ import "swiper/css/pagination";
 
 import { Navigation } from "swiper/modules";
 import { Button, Rating } from "@mui/material";
+import { useContext } from "react";
+import { MyContext } from "../../App";
 
 function PrdouctItem() {
+  const context =useContext(MyContext)
   return (
     <div className="rounded-2xl overflow-hidden shadow-lg flex items-center">
       <div className="group w-[25%] rounded-2xl overflow-hidden relative bg-red-00 ">
@@ -32,7 +35,7 @@ function PrdouctItem() {
         </span>
 
         <div className="actions absolute -top-36 right-3 z-50 flex flex-col gap-2 items-center justify-center transition-all duration-300 group-hover:top-2  opacity-0 group-hover:opacity-100">
-          <Button className="hover:!bg-[#ff5252] hover:text-white transition-all text-black !bg-white !w-[35px] !h-[35px] !min-w-[35px] group !rounded-full">
+          <Button className="hover:!bg-[#ff5252] hover:text-white transition-all text-black !bg-white !w-[35px] !h-[35px] !min-w-[35px] group !rounded-full" onClick={() => context.setOpenProdDetailModal(true)}>
             <MdZoomOutMap className="!text-black text-[18px] group-hover:text-white hover:!text-white" />
           </Button>
           <Button className="hover:!bg-[#ff5252] hover:text-white transition-all text-black !bg-white !w-[35px] !h-[35px] !min-w-[35px] group !rounded-full">

@@ -15,15 +15,15 @@ function Navigation() {
   };
   return (
     <>
-      <nav className="w-[90%] mx-auto py-2">
+      <nav className="w-[90%] mx-auto py-2  border-gray-300 border-b">
         <div className="flex ">
-          <div className="w-[20%] bg-red-00">
+          <div className="w-[20%] bg-red-00 ">
             <Button
               onClick={openCategoryPanel}
               className=" gap-4  !text-black tracking-wide"
             >
               <HiMenuAlt1 size={19} />
-              Shop by Category <FaAngleDown size={17} />
+              Shop By Category <FaAngleDown size={17} />
             </Button>
           </div>
 
