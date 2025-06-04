@@ -11,11 +11,10 @@ import ProductSlider from "../../components/ProductSlider";
 import ProductInfo from "../../components/ProductInfo";
 
 function ProductDetails() {
- 
   const [isActiveTab, setIsActiveTab] = useState(0);
   return (
     <>
-      <div className="py-5 bg-[#f5f0f0]">
+      <div className="py-5">
         <div className="w-[90%] mx-auto">
           <Breadcrumbs aria-label="breadcrumb">
             <Link

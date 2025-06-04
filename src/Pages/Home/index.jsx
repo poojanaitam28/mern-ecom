@@ -26,7 +26,7 @@ function Home() {
   };
 
   return (
-    <div className="bg-[#f5f0f0]">
+    <div className="">
       {/* <HomeSlider /> */}
       <section className="py-6">
         <div className="w-[90%] mx-auto flex bg-red-00 gap-4">

@@ -6,7 +6,7 @@ import { LuHeart } from "react-icons/lu";
 import { IoIosGitCompare } from "react-icons/io";
 
 function ProductInfo() {
-     const [productActionIndex, setProductActionIndex] = useState(null);
+  const [productActionIndex, setProductActionIndex] = useState(null);
   return (
     <div>
       <h1 className="text-[24px] font-[600] mb-2">

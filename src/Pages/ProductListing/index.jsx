@@ -11,8 +11,7 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import PrdouctItem from "../../components/ProductItemListView";
-              import Pagination from '@mui/material/Pagination';
-
+import Pagination from "@mui/material/Pagination";
 
 // function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
 //   event.preventDefault();
@@ -33,7 +32,7 @@ function ProductListing() {
   };
 
   return (
-    <section className="py-5 bg-[#f5f0f0] pb-0">
+    <section className="py-5 pb-0">
       <div className="w-[90%] mx-auto">
         <Breadcrumbs aria-label="breadcrumb">
           <Link
@@ -65,13 +64,21 @@ function ProductListing() {
           <div className="rightCorner w-[80%] py-2">
             <div className="bg-[#f1f1f1] p-2 w-full mb-3 rounded-md flex items-center justify-between">
               <div className="col1 flex items-center itemViewActions">
-                <Button className={`!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-[#000] ${itemView === 'grid' && 'active'}`}>
+                <Button
+                  className={`!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-[#000] ${
+                    itemView === "grid" && "active"
+                  }`}
+                >
                   <CiGrid41
-                     className="text-[rgba(0,0,0,0.7)] text-xl "
+                    className="text-[rgba(0,0,0,0.7)] text-xl "
                     onClick={() => setItemView("grid")}
                   />
                 </Button>
-                 <Button className={`!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-[#000] ${itemView === 'list' && 'active'}`}>
+                <Button
+                  className={`!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-[#000] ${
+                    itemView === "list" && "active"
+                  }`}
+                >
                   <CiGrid2H
                     className="text-[rgba(0,0,0,0.7)] text-xl "
                     onClick={() => setItemView("list")}
@@ -131,7 +138,13 @@ function ProductListing() {
               </div>
             </div>
 
-            <div className={`grid ${itemView === 'grid' ? 'grid-cols-4 md:grid-cols-4' : 'grid-cols-1 md:grid-cols-1 '} gap-4`}>
+            <div
+              className={`grid ${
+                itemView === "grid"
+                  ? "grid-cols-4 md:grid-cols-4"
+                  : "grid-cols-1 md:grid-cols-1 "
+              } gap-4`}
+            >
               {itemView === "grid" ? (
                 <>
                   <ProductItem />

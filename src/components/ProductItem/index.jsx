@@ -9,8 +9,7 @@ import "swiper/css/pagination";
 import { Button, Rating } from "@mui/material";
 
 import { useContext } from "react";
-import { MyContext } from "../../App"; 
-
+import { MyContext } from "../../App";
 
 function PrdouctItem() {
   const context = useContext(MyContext);

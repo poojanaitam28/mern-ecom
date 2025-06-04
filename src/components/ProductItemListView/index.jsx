@@ -14,7 +14,7 @@ import { useContext } from "react";
 import { MyContext } from "../../App";
 
 function PrdouctItem() {
-  const context =useContext(MyContext)
+  const context = useContext(MyContext);
   return (
     <div className="rounded-2xl overflow-hidden shadow-lg flex items-center">
       <div className="group w-[25%] rounded-2xl overflow-hidden relative bg-red-00 ">
@@ -35,7 +35,10 @@ function PrdouctItem() {
         </span>
 
         <div className="actions absolute -top-36 right-3 z-50 flex flex-col gap-2 items-center justify-center transition-all duration-300 group-hover:top-2  opacity-0 group-hover:opacity-100">
-          <Button className="hover:!bg-[#ff5252] hover:text-white transition-all text-black !bg-white !w-[35px] !h-[35px] !min-w-[35px] group !rounded-full" onClick={() => context.setOpenProdDetailModal(true)}>
+          <Button
+            className="hover:!bg-[#ff5252] hover:text-white transition-all text-black !bg-white !w-[35px] !h-[35px] !min-w-[35px] group !rounded-full"
+            onClick={() => context.setOpenProdDetailModal(true)}
+          >
             <MdZoomOutMap className="!text-black text-[18px] group-hover:text-white hover:!text-white" />
           </Button>
           <Button className="hover:!bg-[#ff5252] hover:text-white transition-all text-black !bg-white !w-[35px] !h-[35px] !min-w-[35px] group !rounded-full">
@@ -60,9 +63,15 @@ function PrdouctItem() {
           <span className="oldPrice line-through">Rs. 500</span>
           <span className="newPrice text-[#ff5252] font-semibold">Rs. 400</span>
         </div>
-        <p className="text-base leading-5 font-light mt-2 mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro ipsa placeat vel eum ad cupiditate fugit ea excepturi nobis quae?</p>
+        <p className="text-base leading-5 font-light mt-2 mb-2">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro ipsa
+          placeat vel eum ad cupiditate fugit ea excepturi nobis quae?
+        </p>
         <div>
-          <Button className="btnOrg !mt-3 gap-3"><FiShoppingCart size={19} />Add to Cart</Button>
+          <Button className="btnOrg !mt-3 gap-3">
+            <FiShoppingCart size={19} />
+            Add to Cart
+          </Button>
         </div>
       </div>
     </div>

@@ -12,8 +12,15 @@ import { TbArrowsExchange2 } from "react-icons/tb";
 import { MdPayment } from "react-icons/md";
 import { FaGift } from "react-icons/fa6";
 import { BiSupport } from "react-icons/bi";
+import { MdOutlineDeleteOutline } from "react-icons/md";
+import { useContext } from "react";
+import { MyContext } from "../../App";
+import { RxCross2 } from "react-icons/rx";
+
+import Drawer from "@mui/material/Drawer";
 
 function Footer() {
+  const context = useContext(MyContext);
   return (
     <>
       <footer>
@@ -255,6 +262,110 @@ function Footer() {
           </div>
         </div>
       </div>
+
+      <Drawer
+        anchor={"right"}
+        open={context.openCartPanel}
+        onClose={context.toggleCartPanel(false)}
+        className=" cartPanel"
+      >
+        <div className="flex items-center justify-between py-3 px-4 border-b border-[rgba(0,0,0,0.1)]">
+          <h4>Shopping Cart (1)</h4>
+          <RxCross2
+            className="text-[20px] cursor-pointer"
+            onClick={context.toggleCartPanel(false)}
+          />
+        </div>
+
+        <div className="scroll w-full max-h-[410px] overflow-y-scroll overflow-x-hidden py-3 px-4">
+          <div className="cartItem w-full flex items-center gap-4 border p-2 rounded-md mb-3">
+            <div className="img w-[30%] overflow-hidden h-[100px] rounded-md ">
+              <Link to="/product/1" className="block group">
+                <img
+                  className="w-full group-hover:scale-105"
+                  src="https://images.unsplash.com/photo-1657903566145-23efc479fa52?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2hvcHBpbmclMjBkcmVzc3xlbnwwfDF8MHx8fDI%3D"
+                  alt=""
+                />
+              </Link>
+            </div>
+            <div className="info w-[70%] pr-5 relative">
+              <h4 className="text-[14px] font-[500]">
+                <Link to="/product/1" className="link transition-all">
+                  A-Line Kurti With Sharara & Dupatta
+                </Link>
+              </h4>
+              <p className="flex items-center gap-5">
+                <span>
+                  Qty : <span>2</span>
+                </span>
+                <span className="text-primary font-bold">Price : $25</span>
+              </p>
+              <MdOutlineDeleteOutline className="absolute bottom-[2px] right-[10px] cursor-pointer text-[20px] link transition-all" />
+            </div>
+          </div>
+          <div className="cartItem w-full flex items-center gap-4 border p-2 rounded-md mb-3">
+            <div className="img w-[30%] overflow-hidden h-[100px] rounded-md ">
+              <Link to="/product/1" className="block group">
+                <img
+                  className="w-full group-hover:scale-105"
+                  src="https://images.unsplash.com/photo-1657903566145-23efc479fa52?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2hvcHBpbmclMjBkcmVzc3xlbnwwfDF8MHx8fDI%3D"
+                  alt=""
+                />
+              </Link>
+            </div>
+            <div className="info w-[70%] pr-5 relative">
+              <h4 className="text-[14px] font-[500]">
+                <Link to="/product/1" className="link transition-all">
+                  A-Line Kurti With Sharara & Dupatta
+                </Link>
+              </h4>
+              <p className="flex items-center gap-5">
+                <span>
+                  Qty : <span>2</span>
+                </span>
+                <span className="text-primary font-bold">Price : $25</span>
+              </p>
+              <MdOutlineDeleteOutline className="absolute bottom-[2px] right-[10px] cursor-pointer text-[20px] link transition-all" />
+            </div>
+          </div>
+        </div>
+
+        <div className="bottomSec absolute bottom-5  w-full">
+          <div className="bottomInfo py-3 px-4 w-full border-t border-[rgba(0,0,0,0.1)] flex items-center  flex-col gap-2">
+            <div className="flex items-center justify-between w-full">
+              <span className="text-[16px] font-medium">1 item</span>
+              <span className="text-primary font-bold">$86.00</span>
+            </div>
+            <div className="flex items-center justify-between w-full">
+              <span className="text-[16px] font-medium"> Shipping</span>
+              <span className="text-primary font-bold">$7.00</span>
+            </div>
+          </div>
+
+          <div className="bottomInfo py-3 px-4 w-full border-t border-[rgba(0,0,0,0.1)] flex items-center  flex-col gap-2">
+            <div className="flex items-center justify-between w-full">
+              <span className="text-[16px] font-medium">1 item</span>
+              <span className="text-primary font-bold">$86.00</span>
+            </div>
+            <div className="flex items-center justify-between w-full">
+              <span className="text-[16px] font-medium"> Shipping</span>
+              <span className="text-primary font-bold">$7.00</span>
+            </div>
+            <div className="flex items-center justify-between w-full">
+              <span className="text-[16px] font-medium"> Shipping</span>
+              <span className="text-primary font-bold">$7.00</span>
+            </div>
+            <div className="flex items-center justify-between w-full gap-5">
+              <Link to="/cart" className="w-[50%] d-block">
+                <Button className="btnLg btnOrg w-full">View Cart</Button>
+              </Link>
+              <Link to="/checkout" className="w-[50%] d-block">
+                <Button className="btnLg btnOrg w-full">Checkout </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </Drawer>
     </>
   );
 }
